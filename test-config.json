@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "base_url": "https://some-s3-provider.com",
+  "authentication": {},
+  "media": [
+    {
+      "path": "tv_shows/example_tv_show",
+      "thumbnail": "/thumbnails/example_tv_show.png",
+      "type": "tv_show",
+      "title": "Example TV show",
+      "cast": [
+        {
+          "name": "Example Actor",
+          "role": "idk",
+          "other": "info"
+        }
+      ],
+      "seasons": [
+        {
+          "title": "Season 1",
+          "path": "season_1",
+          "thumbnail": "/thumbnails/example_tv_show/season_1.png",
+          "episodes": [
+            {
+              "title": "Example episode title",
+              "path": "example_episode.mp4",
+              "thumbnail": "/thumbnails/example_tv_show/season_1/example_episode.png",
+              "metadata": {
+                "video": [
+                  {
+                    "title": "",
+                    "codec": "",
+                    "resolution": {
+                      "width": 1920,
+                      "height": 1080
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
