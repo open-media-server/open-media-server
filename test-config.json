@@ -5,7 +5,7 @@
   "media": [
     {
       "path": "tv_shows/example_tv_show",
-      "thumbnail": "/thumbnails/example_tv_show.png",
+      "thumbnail": "example_tv_show.png",
       "type": "tv_show",
       "title": "Example TV show",
       "cast": [
@@ -19,12 +19,13 @@
         {
           "title": "Season 1",
           "path": "season_1",
-          "thumbnail": "/thumbnails/example_tv_show/season_1.png",
+          "number": 1,
+          "thumbnail": "season_1.png",
           "episodes": [
             {
               "title": "Example episode title",
               "path": "example_episode.mp4",
-              "thumbnail": "/thumbnails/example_tv_show/season_1/example_episode.png",
+              "thumbnail": "example_episode.png",
               "metadata": {
                 "video": [
                   {
