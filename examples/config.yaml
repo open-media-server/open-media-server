@@ -1,0 +1,6 @@
+tmdb_api_key: 1506c013386779f969954794da85ac45
+endpoints:
+  - url: https://s3.eu-central-1.wasabisys.com
+    region: eu-central-1
+    bucket_name: aerio-media
+    path: anime/
