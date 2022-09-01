@@ -24,17 +24,17 @@ pub async fn parse_s3(endpoint: &Endpoint) -> Result<Node, S3Error> {
     let paths = res[0]
         .contents
         .iter()
-        .map(|c| c.key.as_str())
+        .map(|c| c.key.replace(&endpoint.path, "").replacen("/", "", 1))
         .filter(|c| regex.is_match(c))
-        .collect::<Vec<&str>>();
+        .collect::<Vec<String>>();
 
     Ok(paths_to_structure(paths))
 }
 
-fn paths_to_structure(paths: Vec<&str>) -> Node {
+fn paths_to_structure(paths: Vec<String>) -> Node {
     let mut root_node = Node {
-        name: String::from(""),
-        path: String::from(""),
+        name: "".to_string(),
+        path: "".to_string(),
         children: None,
     };
 

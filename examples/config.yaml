@@ -3,4 +3,4 @@ endpoints:
   - url: https://s3.eu-central-1.wasabisys.com
     region: eu-central-1
     bucket_name: aerio-media
-    path: anime/
+    path: anime

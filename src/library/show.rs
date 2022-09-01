@@ -3,20 +3,20 @@ use serde::{Deserialize, Serialize};
 
 use super::season::Season;
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Show {
-    name: String,
-    seasons: Vec<Season>,
-    id: i32,
-    description: Option<String>,
-    original_name: Option<String>,
-    air_date: Option<String>,
-    rating: Option<i32>,
-    thumbnail: Option<String>,
+    pub name: String,
+    pub seasons: Vec<Season>,
+    pub id: i32,
+    pub description: Option<String>,
+    pub original_name: Option<String>,
+    pub air_date: Option<String>,
+    pub rating: Option<i32>,
+    pub thumbnail: Option<String>,
 }
 
 impl Show {
-    fn create(name: &str) -> Show {
+    pub fn create(name: &str) -> Show {
         let mut rng = rand::thread_rng();
         Show {
             name: name.to_string(),
